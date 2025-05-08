@@ -1,0 +1,3 @@
+Este es un archivo de marcador para la imagen del hero. 
+En un proyecto real, se reemplazaría este archivo con una imagen real (ejemplo: hero-motorcycle.jpg).
+La imagen debe tener un tamaño adecuado para el encabezado de la página (recomendado: 1920x1080). 

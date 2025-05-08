@@ -1,0 +1,1079 @@
+.crear-solicitud-page {
+  padding-top: 60px; /* Espacio para la barra de navegación */
+}
+
+.solicitud-hero {
+  position: relative;
+  height: 250px;
+  background-image: url('/solicitud-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #333; /* Fallback */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.solicitud-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.solicitud-hero .content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.solicitud-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.solicitud-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.form-container {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.form-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.form-section h3 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+input, select, textarea {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #ff6b00;
+  box-shadow: 0 0 0 2px rgba(255, 107, 0, 0.1);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn.primary {
+  background-color: #ff6b00;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #e05f00;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background-color: #f5f5f5;
+  color: #555;
+}
+
+.btn.secondary:hover {
+  background-color: #eee;
+}
+
+/* Confirmación de envío */
+.confirmacion {
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  text-align: center;
+}
+
+.confirmacion-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background-color: #388e3c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+}
+
+.confirmacion h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.confirmacion p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .solicitud-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+.consultar-estado-page {
+  padding-top: 60px; /* Espacio para la barra de navegación */
+}
+
+.consulta-hero {
+  position: relative;
+  height: 250px;
+  background-image: url('/solicitud-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: #333; /* Fallback */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin-bottom: 50px;
+}
+
+.consulta-hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.consulta-hero .content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.consulta-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.consulta-hero p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.consulta-container {
+  max-width: 800px;
+  margin: 0 auto 50px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.consulta-form {
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+input, select, textarea {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #ff6b00;
+  box-shadow: 0 0 0 2px rgba(255, 107, 0, 0.1);
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn.primary {
+  background-color: #ff6b00;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #e05f00;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background-color: #f5f5f5;
+  color: #555;
+}
+
+.btn.secondary:hover {
+  background-color: #eee;
+}
+
+/* No resultados */
+.no-resultados {
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid #eee;
+}
+
+.no-resultados .icono {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #999;
+}
+
+.no-resultados h3 {
+  color: #555;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.no-resultados p {
+  color: #777;
+  max-width: 500px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Resultado de consulta */
+.resultado-consulta {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 30px;
+}
+
+.resultado-consulta h3 {
+  color: #333;
+  margin-bottom: 25px;
+  font-size: 1.4rem;
+  border-bottom: 2px solid #ff6b00;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.servicio-info {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 25px;
+}
+
+.servicio-info > div {
+  margin-bottom: 30px;
+}
+
+.servicio-info > div:last-child {
+  margin-bottom: 0;
+}
+
+.estado-badge-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.estado-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.estado-badge.recibido {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.estado-badge.en-proceso {
+  background-color: #fff8e1;
+  color: #ff8f00;
+}
+
+.estado-badge.listo {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin: 25px 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.info-row {
+  display: flex;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 12px 0;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.info-label {
+  font-weight: 600;
+  color: #555;
+  width: 45%;
+  padding-right: 20px;
+  flex-shrink: 0;
+}
+
+.info-value {
+  color: #333;
+  font-weight: 500;
+  flex-grow: 1;
+  padding-left: 15px;
+  position: relative;
+}
+
+.info-value::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: #eee;
+  height: 80%;
+  margin: auto;
+}
+
+.info-row:nth-child(4) .info-label,
+.info-row:nth-child(4) .info-value {
+  font-weight: 600;
+  color: #333;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.detalles-servicio {
+  margin-bottom: 25px;
+}
+
+.detalles-servicio h4 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.detalles-servicio p {
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Barra de progreso */
+.progreso-servicio h4 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.barra-progreso {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 10px;
+}
+
+.barra-progreso:before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 50px;
+  right: 50px;
+  height: 4px;
+  background-color: #ddd;
+  z-index: 1;
+}
+
+.paso {
+  width: 30%;
+  text-align: center;
+  position: relative;
+  padding-top: 30px;
+  z-index: 2;
+  font-weight: 500;
+  color: #999;
+}
+
+.paso:before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+.paso.activo {
+  color: #ff6b00;
+}
+
+.paso.activo:before {
+  background-color: #ff6b00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .consulta-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .barra-progreso:before {
+    left: 20px;
+    right: 20px;
+  }
+}
+
+/* Estilos para la sección de datos de prueba */
+.datos-prueba {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  border: 1px dashed #ddd;
+}
+
+.datos-prueba-titulo {
+  cursor: pointer;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toggle-icon {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.active {
+  transform: rotate(180deg);
+}
+
+.datos-prueba ul {
+  padding-left: 20px;
+  margin: 0;
+}
+
+.datos-prueba ul.hidden {
+  display: none;
+}
+
+.datos-prueba ul.visible {
+  display: block;
+}
+
+.datos-prueba li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.datos-prueba li:last-child {
+  margin-bottom: 0;
+}
+
+.datos-prueba strong {
+  color: #ff6b00;
+}
+
+/* Ajuste adicional para dispositivos móviles */
+@media (min-width: 768px) {
+  .datos-prueba ul.hidden {
+    display: block; /* En pantallas grandes, siempre mostrar los datos */
+  }
+  
+  .toggle-icon {
+    display: none; /* Ocultar el icono de toggle en pantallas grandes */
+  }
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 767px) {
+  .datos-prueba-titulo {
+    padding: 5px 0;
+  }
+}
+
+/* Estilos mejorados para el precio total */
+.precio-total {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border-left: 3px solid #ff6b00;
+}
+
+.precio-total .info-label {
+  font-weight: 700;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.precio-total .info-value {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.precio-destacado {
+  font-weight: 700;
+  color: #ff6b00;
+  font-size: 1.4rem;
+}
+
+.precio-dop {
+  display: block;
+  font-weight: 600;
+  color: #1565c0;
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+.precio-nota {
+  display: block;
+  color: #777;
+  font-style: italic;
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+
+/* Responsive styles for ConsultarEstado page */
+
+/* Desktop (1200px y superior) */
+@media (min-width: 1200px) {
+  .consulta-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+  
+  .consulta-hero h1 {
+    font-size: 2.8rem;
+  }
+  
+  .consulta-hero p {
+    font-size: 1.3rem;
+  }
+  
+  .resultado-consulta {
+    padding: 40px;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .detalles-servicio {
+    margin-top: 40px;
+  }
+}
+
+/* Tablets y Desktops medianos (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .consulta-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px;
+  }
+  
+  .consulta-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .consulta-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 25px;
+  }
+  
+  .consulta-hero {
+    height: 220px;
+  }
+  
+  .consulta-hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .consulta-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .form-row {
+    flex-direction: row;
+    gap: 20px;
+  }
+  
+  .resultado-consulta {
+    padding: 25px;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .barra-progreso {
+    margin: 35px 0;
+  }
+}
+
+/* Móviles (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .consulta-container {
+    padding: 20px;
+  }
+  
+  .consulta-hero {
+    height: 200px;
+  }
+  
+  .consulta-hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .consulta-hero p {
+    font-size: 1rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .resultado-consulta {
+    padding: 20px;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .estado-badge {
+    font-size: 0.9rem;
+    padding: 5px 12px;
+  }
+  
+  .detalles-servicio {
+    margin-top: 25px;
+  }
+  
+  .barra-progreso {
+    margin: 30px 0;
+  }
+  
+  .paso {
+    font-size: 0.8rem;
+  }
+}
+
+/* Móviles pequeños (hasta 575px) */
+@media (max-width: 575px) {
+  .consulta-container {
+    padding: 15px;
+  }
+  
+  .consulta-hero {
+    height: 180px;
+  }
+  
+  .consulta-hero h1 {
+    font-size: 1.6rem;
+    margin-bottom: 8px;
+  }
+  
+  .consulta-hero p {
+    font-size: 0.9rem;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+  
+  .resultado-consulta {
+    padding: 15px;
+  }
+  
+  .resultado-consulta h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .info-row {
+    margin-bottom: 8px;
+  }
+  
+  .info-label {
+    font-size: 0.85rem;
+  }
+  
+  .info-value {
+    font-size: 0.95rem;
+  }
+  
+  .estado-badge {
+    font-size: 0.8rem;
+    padding: 4px 10px;
+  }
+  
+  .detalles-servicio {
+    margin-top: 20px;
+  }
+  
+  .detalles-servicio h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  .detalles-servicio p {
+    font-size: 0.9rem;
+  }
+  
+  .barra-progreso {
+    margin: 25px 0;
+    height: 4px;
+  }
+  
+  .barra-progreso:before {
+    height: 4px;
+  }
+  
+  .paso {
+    font-size: 0.75rem;
+  }
+  
+  .paso:before {
+    width: 18px;
+    height: 18px;
+    margin-bottom: 6px;
+  }
+  
+  .datos-prueba {
+    padding: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .datos-prueba h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+  
+  .datos-prueba ul {
+    padding-left: 15px;
+  }
+  
+  .datos-prueba li {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+  
+  .precio-total {
+    margin-top: 15px;
+    padding-top: 15px;
+  }
+  
+  .precio-total .info-value {
+    font-size: 1.2rem;
+  }
+}
+
+/* Estilos para el contenedor de carga */
+.cargando-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  margin: 20px 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #ff6b00;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.cargando-container p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Estilos para el mensaje de error */
+.error-message {
+  background-color: #ffebee;
+  border-left: 4px solid #f44336;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  color: #d32f2f;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+.consulta-form .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Estilo para campos opcionales */
+.consulta-form .form-group label::after {
+  content: " (opcional)";
+  font-weight: normal;
+  font-size: 0.85em;
+  color: #666;
+  font-style: italic;
+}
+
+/* Botón de consulta más atractivo */
+.btn-consultar {
+  background-color: #ff6b00;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-consultar:hover {
+  background-color: #e56000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-consultar:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Mensaje de información sobre campos opcionales */
+.campos-info {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 15px;
+  font-style: italic;
+  text-align: center;
+}
+
+.formato-ayuda {
+  display: block;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 5px;
+  font-style: italic;
+} 

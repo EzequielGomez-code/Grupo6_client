@@ -1,0 +1,884 @@
+/* Reutilizamos algunos estilos generales de la sección de solicitudes */
+.admin-page {
+  padding-top: 80px;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.admin-header {
+  background-color: #333;
+  color: white;
+  padding: 30px 0;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.admin-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.admin-header h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+.usuarios-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 0 30px 40px;
+}
+
+/* Sección de registro de usuarios */
+.registro-usuario-container,
+.lista-usuarios-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+}
+
+.registro-usuario-container h3,
+.lista-usuarios-container h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+/* Estilos para el formulario */
+.registro-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-section {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+
+.form-section:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.form-section h4 {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.registro-form label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.registro-form input,
+.registro-form select,
+.registro-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.registro-form input:focus,
+.registro-form select:focus,
+.registro-form textarea:focus {
+  border-color: #ff6b00;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+  outline: none;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #ff6b00;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #e05f00;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background-color: #f5f5f5;
+  color: #555;
+}
+
+.btn.secondary:hover {
+  background-color: #eee;
+  transform: translateY(-2px);
+}
+
+/* Estilo para el campo de descripción del servicio */
+.descripcion-servicio {
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 1rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.descripcion-servicio:focus {
+  border-color: #ff6b00;
+  box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.1);
+  outline: none;
+}
+
+.descripcion-nota {
+  display: block;
+  color: #666;
+  font-style: italic;
+  margin-top: 8px;
+  font-size: 0.85rem;
+}
+
+.form-group.full-width {
+  width: 100%;
+}
+
+/* Estilos para la tabla de usuarios */
+.usuarios-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.usuarios-table th,
+.usuarios-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.usuarios-table th {
+  background-color: #f9f9f9;
+  font-weight: 600;
+  color: #333;
+}
+
+.usuarios-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.usuarios-table tr:last-child td {
+  border-bottom: none;
+}
+
+.btn-eliminar {
+  padding: 8px 15px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-eliminar:hover {
+  background-color: #d32f2f;
+}
+
+/* Estado y rol badges */
+.rol-badge, .estado-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.rol-badge.admin {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.rol-badge.empleado {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.estado-badge.recibido {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.estado-badge.en-proceso {
+  background-color: #fff8e1;
+  color: #ff8f00;
+}
+
+.estado-badge.listo {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+/* Estilos para mensajes */
+.mensaje-success,
+.mensaje-error {
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.mensaje-success {
+  background-color: #e8f5e9;
+  color: #388e3c;
+  border-left: 4px solid #4caf50;
+}
+
+.mensaje-error {
+  background-color: #ffebee;
+  color: #d32f2f;
+  border-left: 4px solid #f44336;
+}
+
+.cerrar-mensaje {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Botones de estado */
+.acciones-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.estado-actions {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.estado-btn {
+  padding: 5px 8px;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.estado-btn:hover:not(:disabled) {
+  opacity: 1;
+}
+
+.estado-btn.active {
+  opacity: 1;
+  font-weight: 600;
+}
+
+.estado-btn.recibido {
+  background-color: #e3f2fd;
+  color: #1976d2;
+}
+
+.estado-btn.en-proceso {
+  background-color: #fff8e1;
+  color: #ff8f00;
+}
+
+.estado-btn.listo {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.estado-btn:disabled {
+  cursor: not-allowed;
+}
+
+/* Filas con color según estado */
+tr.estado-recibido {
+  background-color: rgba(227, 242, 253, 0.2);
+}
+
+tr.estado-en-proceso {
+  background-color: rgba(255, 248, 225, 0.2);
+}
+
+tr.estado-listo {
+  background-color: rgba(232, 245, 233, 0.2);
+}
+
+/* Responsivo */
+@media (max-width: 1200px) {
+  .usuarios-table {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .usuarios-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .usuarios-container {
+    padding: 0 15px 30px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+}
+
+.admin-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.admin-nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+  font-weight: 500;
+}
+
+.admin-nav-link:hover {
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.admin-nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  opacity: 1;
+  font-weight: 600;
+}
+
+/* Mejoras de Responsive Design para todas las vistas */
+
+/* Desktop (1200px y superior) */
+@media (min-width: 1200px) {
+  .usuarios-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 30px 40px;
+  }
+  
+  .registro-usuario-container,
+  .lista-usuarios-container {
+    padding: 30px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 30px;
+  }
+  
+  .admin-header h1 {
+    font-size: 2.5rem;
+  }
+  
+  .admin-header h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Tablets y Desktops medianos (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .usuarios-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 25px 35px;
+  }
+  
+  .form-row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .registro-usuario-container,
+  .lista-usuarios-container {
+    padding: 25px;
+  }
+  
+  .usuarios-table th, 
+  .usuarios-table td {
+    padding: 12px 10px;
+  }
+  
+  .admin-header h1 {
+    font-size: 2.3rem;
+  }
+  
+  .admin-header h2 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .usuarios-container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 20px 30px;
+  }
+  
+  .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .registro-usuario-container,
+  .lista-usuarios-container {
+    padding: 20px;
+  }
+  
+  .admin-header {
+    padding: 25px 0;
+    margin-bottom: 25px;
+  }
+  
+  .admin-header h1 {
+    font-size: 2rem;
+  }
+  
+  .admin-header h2 {
+    font-size: 1.4rem;
+  }
+  
+  .form-section {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  
+  /* Ajustar tabla para tablets */
+  .usuarios-table {
+    font-size: 0.9rem;
+  }
+  
+  .usuarios-table th, 
+  .usuarios-table td {
+    padding: 10px 8px;
+  }
+  
+  /* Ocultar ciertas columnas en tablet */
+  .usuarios-table .email-column,
+  .usuarios-table .telefono-column {
+    display: none;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+  
+  .estado-btn {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Móviles (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .usuarios-container {
+    padding: 0 15px 25px;
+    gap: 25px;
+  }
+  
+  .admin-header {
+    padding: 20px 0;
+    margin-bottom: 20px;
+  }
+  
+  .admin-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+  }
+  
+  .admin-header h2 {
+    font-size: 1.2rem;
+  }
+  
+  .admin-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .admin-nav-link {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .registro-usuario-container h3,
+  .lista-usuarios-container h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 12px;
+  }
+  
+  .form-section h4 {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  
+  .registro-form label {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .btn {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+  
+  /* Convertir tabla a diseño de tarjetas para móvil */
+  .usuarios-table {
+    display: block;
+  }
+  
+  .usuarios-table thead {
+    display: none; /* Ocultar cabeceras */
+  }
+  
+  .usuarios-table tbody {
+    display: block;
+  }
+  
+  .usuarios-table tr {
+    display: block;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  }
+  
+  .usuarios-table td {
+    display: block;
+    text-align: right;
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    padding-left: 50%;
+  }
+  
+  .usuarios-table td:last-child {
+    border-bottom: none;
+  }
+  
+  .usuarios-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-right: 10px;
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+  }
+  
+  .acciones-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .estado-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/* Móviles pequeños (hasta 575px) */
+@media (max-width: 575px) {
+  .usuarios-container {
+    padding: 0 10px 20px;
+    gap: 20px;
+  }
+  
+  .admin-header {
+    padding: 15px 0;
+    margin-bottom: 15px;
+  }
+  
+  .admin-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+  }
+  
+  .admin-header h2 {
+    font-size: 1.1rem;
+  }
+  
+  .admin-nav {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .admin-nav-link {
+    width: 90%;
+    margin: 0 auto;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+  
+  .registro-usuario-container,
+  .lista-usuarios-container {
+    padding: 15px;
+  }
+  
+  .registro-usuario-container h3,
+  .lista-usuarios-container h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+    padding-bottom: 10px;
+  }
+  
+  .form-section {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+  }
+  
+  .form-section h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+  
+  .registro-form label {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+  }
+  
+  .registro-form input,
+  .registro-form select,
+  .registro-form textarea {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+  
+  .btn-eliminar {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+  
+  .estado-badge, .rol-badge {
+    padding: 4px 8px;
+    font-size: 0.8rem;
+  }
+  
+  /* Tabla como tarjetas para móvil pequeño */
+  .usuarios-table tr {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .usuarios-table td {
+    padding: 6px 0;
+    font-size: 0.85rem;
+  }
+  
+  .mensaje-success,
+  .mensaje-error {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Estilos para secciones colapsables */
+.section-title-collapsible {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.toggle-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  margin-left: 10px;
+}
+
+.section-content.collapsed,
+.table-container.collapsed {
+  display: none;
+}
+
+/* Añadir icono de flecha para indicar que es colapsable */
+.section-title-collapsible::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 10px;
+}
+
+/* Estilos específicos para móvil */
+@media (max-width: 767px) {
+  .section-title-collapsible {
+    background-color: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 3px solid #0056b3;
+  }
+  
+  .toggle-icon {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    background-color: #e9ecef;
+    border-radius: 50%;
+  }
+  
+  .form-section {
+    margin-bottom: 20px;
+  }
+  
+  .section-content {
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 5px;
+    margin-top: -5px;
+  }
+}
+
+/* Estilos para desktop donde todo es visible por defecto */
+@media (min-width: 768px) {
+  .toggle-icon {
+    display: none;
+  }
+  
+  .section-title-collapsible {
+    cursor: default;
+  }
+  
+  .section-content.collapsed,
+  .table-container.collapsed {
+    display: block;
+  }
+}
+
+/* Estilos para el total estimado */
+.total-estimado-container {
+  margin-top: 15px;
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  border-left: 4px solid #ff6b00;
+}
+
+.total-estimado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.total-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.total-values {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.total-value {
+  font-weight: 700;
+  color: #ff6b00;
+  font-size: 1.2rem;
+}
+
+.total-value-dop {
+  font-weight: 600;
+  color: #1565c0;
+  font-size: 1.1rem;
+  margin-top: 3px;
+}
+
+.total-info {
+  display: block;
+  color: #777;
+  font-style: italic;
+} 

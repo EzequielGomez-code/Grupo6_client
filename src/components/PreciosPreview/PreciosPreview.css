@@ -1,0 +1,142 @@
+.precios-preview {
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.precios-titulo {
+  font-size: 1.1rem;
+  color: #ff6b00;
+  margin-top: 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.precios-error {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #ffebee;
+  border-radius: 4px;
+}
+
+.piezas-lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.pieza-card {
+  background-color: white;
+  border-radius: 6px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+  border-left: 3px solid #ff6b00;
+}
+
+.pieza-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.pieza-nombre {
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  text-transform: capitalize;
+}
+
+.pieza-precios {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.precio {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+}
+
+.etiqueta {
+  color: #666;
+  font-weight: 500;
+}
+
+.valor {
+  font-weight: 600;
+  color: #333;
+}
+
+.totales-section {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 6px;
+}
+
+.total-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.total-label {
+  font-weight: 600;
+  color: #555;
+}
+
+.total-value {
+  color: #333;
+}
+
+.grand-total {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.grand-total .total-label {
+  font-weight: 700;
+  color: #333;
+}
+
+.currency-dop {
+  font-weight: 700;
+  color: #1565c0;
+}
+
+.preview-nota {
+  display: block;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 12px;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .piezas-lista {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+  
+  .pieza-card {
+    padding: 10px;
+  }
+  
+  .pieza-nombre {
+    font-size: 0.9rem;
+  }
+  
+  .precio {
+    font-size: 0.85rem;
+  }
+} 

@@ -1,0 +1,679 @@
+/* Home Page Styles */
+.home {
+  width: 100%;
+  padding-top: 60px; /* Espacio para la barra de navegación fija */
+  overflow-x: hidden;
+}
+
+/* Scroll suave para la navegación por anclas */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ajuste para las anclas con barra de navegación fija */
+section[id] {
+  scroll-margin-top: 100px; /* Aumentado para evitar que el contenido quede detrás de la barra de navegación */
+  scroll-snap-align: start;
+  position: relative;
+}
+
+/* Para asegurar que el ancla apunte a la parte superior de la sección */
+section[id]::before {
+  content: '';
+  display: block;
+  height: 80px;
+  margin-top: -80px;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* General Section Styles */
+section {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 70px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+  color: #333;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 50px; /* Aumentado para más espacio */
+  color: #333;
+  position: relative;
+}
+
+/* Services Section */
+.services {
+  background-color: #f9f9f9;
+  padding-top: 80px; /* Ajustado para mejor espaciado */
+  padding-bottom: 100px;
+}
+
+.services h2 {
+  margin-bottom: 70px; /* Aumentado para dar más espacio entre el título y las tarjetas */
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px; /* Limitando el ancho máximo para mejor control */
+  margin: 0 auto;
+}
+
+.service-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-icon {
+  margin-bottom: 20px;
+  color: #ff6b00;
+}
+
+.service-card h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* About Section */
+.about {
+  background-color: #fff;
+  padding-top: 120px; /* Espacio adicional superior */
+  padding-bottom: 120px; /* Espacio adicional inferior */
+}
+
+.about h2 {
+  margin-bottom: 70px; /* Aumentado para dar más espacio entre el título y el contenido */
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 50px;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about-text {
+  padding-right: 20px;
+}
+
+.about-text p {
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.8;
+  font-size: 1.1rem;
+}
+
+.about-text strong {
+  color: #ff6b00;
+}
+
+.about-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Imagen del equipo */
+.about-team-image {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Eliminar el placeholder anterior */
+.about-image::before {
+  content: none;
+}
+
+/* Gallery Section */
+.gallery {
+  background-color: #f9f9f9;
+  padding: 100px 0;
+  position: relative;
+}
+
+.gallery h2 {
+  margin-bottom: 60px;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.gallery-item {
+  perspective: 1000px;
+  height: 350px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.gallery-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.gallery-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.gallery-item:hover .gallery-image {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  box-sizing: border-box;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-caption {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+  transition-delay: 0.2s;
+  width: 100%;
+}
+
+.gallery-item:hover .gallery-caption {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.gallery-caption h3 {
+  color: white;
+  margin-bottom: 8px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.gallery-caption p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Testimonials Section */
+.testimonials {
+  background-color: #f9f9f9;
+  padding-top: 120px; /* Espacio adicional superior */
+  padding-bottom: 120px; /* Espacio adicional inferior */
+}
+
+.testimonials h2 {
+  margin-bottom: 70px; /* Aumentado para dar más espacio entre el título y las tarjetas */
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1100px; /* Limitando el ancho máximo para mejor control */
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.testimonial-card::before {
+  content: '"';
+  font-size: 60px;
+  color: #ff6b00;
+  opacity: 0.2;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  line-height: 1;
+}
+
+.client-name {
+  text-align: right;
+  color: #ff6b00;
+  font-weight: bold;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #fff;
+  padding-top: 120px; /* Espacio adicional superior */
+  padding-bottom: 120px; /* Espacio adicional inferior */
+}
+
+.contact h2 {
+  margin-bottom: 60px;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  color: #555;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.contact-info svg {
+  margin-right: 15px;
+  color: #ff6b00;
+  flex-shrink: 0;
+}
+
+.contact-info a {
+  color: #555;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #ff6b00;
+}
+
+.contact-map {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  height: 100%;
+  min-height: 300px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-map iframe {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.map-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #777;
+}
+
+.map-placeholder svg {
+  margin-bottom: 15px;
+  color: #999;
+}
+
+.map-placeholder span {
+  font-size: 1.1rem;
+}
+
+/* =================== Responsive Styles =================== */
+
+/* Desktop grande (1200px y superior) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  section h2 {
+    font-size: 2.8rem;
+  }
+  
+  .services-grid, 
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Tablets y Desktops medianos (992px - 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  section h2 {
+    font-size: 2.5rem;
+  }
+  
+  section {
+    padding: 90px 0;
+  }
+  
+  .services-grid,
+  .gallery-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .about-image {
+    min-height: 320px;
+  }
+}
+
+/* Tablets (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  section {
+    padding: 60px 0;
+  }
+  
+  section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+  
+  .services h2,
+  .about h2,
+  .gallery h2,
+  .contact h2 {
+    margin-bottom: 50px;
+  }
+  
+  .services-grid, 
+  .gallery-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  
+  .service-card {
+    padding: 30px 25px;
+  }
+  
+  .about-content,
+  .contact-content {
+    gap: 40px;
+  }
+  
+  .about-image {
+    order: -1;
+    margin-bottom: 20px;
+    max-height: 400px;
+    width: 100%;
+  }
+  
+  .about-team-image {
+    max-height: 400px;
+    width: 100%;
+  }
+  
+  .about-text {
+    padding-right: 0;
+  }
+  
+  .gallery-item {
+    height: 300px;
+  }
+}
+
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  section {
+    padding: 50px 0;
+    scroll-margin-top: 60px;
+  }
+  
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .services,
+  .about,
+  .gallery,
+  .contact {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  
+  .services h2,
+  .about h2,
+  .gallery h2,
+  .contact h2 {
+    margin-bottom: 40px;
+  }
+  
+  .services-grid, 
+  .gallery-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-card {
+    padding: 25px;
+  }
+  
+  .service-icon svg {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.3rem;
+  }
+  
+  .about-content,
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .about-image {
+    order: -1;
+    margin-bottom: 30px;
+    min-height: auto;
+    max-height: 350px;
+    width: 100%;
+  }
+  
+  .about-team-image {
+    max-height: 350px;
+    width: 100%;
+  }
+  
+  .about-text {
+    padding-right: 0;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+    text-align: left;
+  }
+  
+  .gallery-item {
+    height: 280px;
+  }
+  
+  .gallery-caption h3 {
+    font-size: 1.2rem;
+  }
+  
+  .gallery-caption p {
+    font-size: 0.9rem;
+  }
+  
+  .contact-map {
+    min-height: 250px;
+  }
+  
+  .contact-info p {
+    font-size: 1rem;
+  }
+  
+  .contact-info svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Ajustes específicos para navegación en móviles */
+  section[id] {
+    scroll-margin-top: 60px;
+  }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+  section h2 {
+    font-size: 1.8rem;
+  }
+  
+  .service-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .service-card h3 {
+    font-size: 1.2rem;
+  }
+  
+  .about-image {
+    max-height: 300px;
+  }
+  
+  .about-team-image {
+    max-height: 300px;
+  }
+  
+  .gallery-item {
+    height: 250px;
+  }
+  
+  .gallery-caption h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+  }
+  
+  .gallery-caption p {
+    font-size: 0.85rem;
+  }
+  
+  .contact-content {
+    gap: 20px;
+  }
+  
+  .contact-info {
+    gap: 20px;
+  }
+  
+  .contact-map {
+    min-height: 200px;
+  }
+} 

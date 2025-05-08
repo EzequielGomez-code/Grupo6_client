@@ -1,0 +1,393 @@
+.navbar {
+  background-color: #222;
+  color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 100%;
+  width: 100%;
+}
+
+/* Sección del logo a la izquierda */
+.navbar-logo {
+  order: 1;
+  margin-right: auto;
+}
+
+.navbar-logo h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 700;
+  color: white;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+/* Navegación al centro */
+.navbar-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  height: 100%;
+  order: 2;
+  justify-content: center;
+  flex: 1;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  padding: 0 5px;
+  transition: color 0.3s ease;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.nav-link:hover {
+  color: #ff6b00;
+}
+
+/* Sección de usuario y botón de cerrar sesión a la derecha */
+.user-section {
+  display: flex;
+  align-items: center;
+  order: 3;
+  margin-left: auto;
+}
+
+/* Estilos para información de usuario - diseño limpio */
+.user-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 15px;
+  margin-right: 10px;
+  background-color: #ff6b00;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.user-info:hover {
+  background-color: #e05f00;
+  transform: translateY(-2px);
+}
+
+.user-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  color: white;
+}
+
+/* Estilos para el botón de cerrar sesión */
+.admin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  background-color: #f44336;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.admin-link:hover {
+  background-color: #f44336;
+  transform: translateY(-2px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilos para el enlace de administrador en el navbar */
+.nav-link.admin-link {
+  background-color: #388e3c;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  height: auto;
+  margin: 0;
+}
+
+.nav-link.admin-link:hover {
+  background-color: #2e7d32;
+  transform: translateY(-2px);
+  color: white;
+}
+
+/* Estilos para el icono de administrador */
+.admin-icon-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #ff6b00;
+  color: white;
+  transition: all 0.3s ease;
+  margin-left: 5px;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-icon-link:hover {
+  background-color: #e05f00;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(255, 107, 0, 0.3);
+}
+
+.admin-icon-link:active {
+  transform: translateY(-1px);
+}
+
+.admin-icon-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.admin-icon-link:hover::before {
+  opacity: 1;
+}
+
+.admin-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-link {
+  background-color: #388e3c;
+  padding: 5px 15px;
+  border-radius: 4px;
+  color: white;
+}
+
+.cta-link:hover {
+  background-color: #2e7d32;
+  color: white;
+}
+
+.cta-link:hover:after {
+  display: none;
+}
+
+/* Menú hamburguesa para móvil */
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1001;
+  margin-right: 10px;
+}
+
+.mobile-menu-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Overlay para el fondo cuando el menú está abierto */
+.menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.menu-overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .navbar-container {
+    padding: 12px 20px;
+  }
+  
+  .mobile-menu-toggle {
+    display: flex;
+    order: 2;
+  }
+  
+  .navbar-logo {
+    order: 1;
+    margin-right: auto;
+  }
+  
+  .user-section {
+    order: 3;
+    margin-left: auto;
+  }
+  
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    flex-direction: column;
+    background-color: #333;
+    width: 70%;
+    max-width: 300px;
+    height: 100vh;
+    padding: 80px 30px 30px;
+    transition: right 0.3s ease;
+    gap: 20px;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex: none;
+  }
+  
+  .navbar-links.active {
+    right: 0;
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  
+  .nav-link {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.1rem;
+    height: auto;
+  }
+  
+  /* Añadir el botón admin en el menú móvil */
+  .navbar-links .nav-link.admin-link {
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 12px;
+  }
+  
+  /* Ajustes para mostrar correctamente el usuario y botón en móvil */
+  .user-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .user-info,
+  .admin-link {
+    margin: 0 5px;
+  }
+  
+  .user-info {
+    padding: 4px 10px;
+  }
+  
+  .admin-link {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+  }
+  
+  .user-name {
+    font-size: 0.85rem;
+    max-width: 80px;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-container {
+    padding: 10px 15px;
+  }
+  
+  .navbar-logo h1 {
+    font-size: 1.3rem;
+  }
+  
+  .navbar-links {
+    width: 80%;
+    padding: 70px 25px 25px;
+  }
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .user-info {
+    margin: 15px 0;
+    padding: 12px 20px;
+    justify-content: center;
+    width: 100%;
+    max-width: none;
+  }
+  
+  .user-name {
+    font-size: 1.2rem;
+    max-width: none;
+    text-align: center;
+  }
+  
+  .admin-link {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+    padding: 12px 20px;
+    justify-content: center;
+  }
+} 
