@@ -409,11 +409,11 @@ const AdminUsuarios: FC = () => {
               <div className={`section-content ${motoColapsada ? 'collapsed' : ''}`}>
                 <div className="form-row">
                   <div className="form-group">
-                    <label htmlFor="tipoMoto">Tipo de Moto*</label>
+                    <label htmlFor="tipoDeMoto">Tipo de Moto*</label>
                     <input
                       type="text"
-                      id="tipoMoto"
-                      name="tipoMoto"
+                      id="tipoDeMoto"
+                      name="tipoDeMoto"
                       value={formDataPersonal.tipoDeMoto}
                       onChange={handleChangePersonal}
                       placeholder="Ej: Honda CBR 600"
