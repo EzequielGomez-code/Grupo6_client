@@ -5,12 +5,6 @@ import { getRegisters, updateRegisterStatus } from '../../../services/RegisterMo
 import type { Solicitud } from '../../../types';
 import type { EstadoSolicitud } from '../../../types';
 
-const estadosIniciales: Record<number, EstadoSolicitud> = {
-  1: 'Recibido',
-  2: 'En proceso',
-  3: 'Listo',
-};
-
 const AdminSolicitudes: FC = () => {
   const [solicitudes, setSolicitudes] = useState<Solicitud[]>([]);
   const [cargando, setCargando] = useState<boolean>(true);
@@ -39,7 +33,7 @@ const AdminSolicitudes: FC = () => {
           placaMoto: registro.placaMoto || '',
           modeloMoto: registro.modeloMoto,
           descripcionServicio: registro.descripcionServicio || '',
-          estado: estadosIniciales[index + 1] || 'Recibido', // Estado predeterminado
+          estado: registro.estado || 'Recibido', // Estado predeterminado
           fecha: registro.createdAt || new Date().toISOString().split('T')[0]
         }));
         
